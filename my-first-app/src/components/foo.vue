@@ -7,12 +7,12 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'Foo',
   data () {
     return {
-      msg: '这个是foo.vue'
+      msg: '这个是foo.vue页面'
     }
-  }
+  },
+  props: ['logo']
 }
 </script>
-

@@ -1,34 +1,42 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloCustomer from '@/components/HelloCustomer'
-import Search360 from '@/components/Search360'
-import BaiDu from '@/components/BaiDu'
-import SouGou from '@/components/SouGou'
+// import HelloCustomer from '@/components/HelloCustomer'
+// import Search360 from '@/components/Search360'
+// import BaiDu from '@/components/BaiDu'
+// import SouGou from '@/components/SouGou'
+import Hello from '@/components/hello'
+import Foo from '@/components/foo'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloCustomer',
-      component: HelloCustomer
+      path: '/hello',
+      name: 'Hello',
+      component: Hello
     },
     {
-      path: '/search360',
-      name: 'Search360',
-      component: Search360
+      path: '/foo',
+      name: 'Foo',
+      component: Foo
     },
-    {
-      path: '/baidu',
-      name: 'BaiDu',
-      component: BaiDu
-    },
-    {
-      path: '/sougou',
-      name: 'SouGou',
-      component: SouGou
-    }
+    {path: '*', redirect: '/hello'}// 配置默认页面路径
+    // {
+    //   path: '/search360',
+    //   name: 'Search360',
+    //   component: Search360
+    // },
+    // {
+    //   path: '/baidu',
+    //   name: 'BaiDu',
+    //   component: BaiDu
+    // },
+    // {
+    //   path: '/sougou',
+    //   name: 'SouGou',
+    //   component: SouGou
+    // }
   ]
 })
 
