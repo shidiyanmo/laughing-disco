@@ -12,16 +12,16 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/hello',
+      path: '/hello:hparam1',
       name: 'Hello',
       component: Hello
     },
     {
-      path: '/foo',
+      path: '/foo/:fparam1/age:fparam2',
       name: 'Foo',
       component: Foo
     },
-    {path: '*', redirect: '/hello'}// 配置默认页面路径
+    {path: '*', redirect: '/hello:hparam1'}// 配置默认页面路径
     // {
     //   path: '/search360',
     //   name: 'Search360',

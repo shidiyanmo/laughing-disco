@@ -4,10 +4,10 @@
     <div class="nav">
       <ul>
         <li>
-          <router-link to="/hello">hello</router-link>
+          <router-link to="/hello1232">hello</router-link>
         </li>
         <li>
-          <router-link to="/foo">foo</router-link>
+          <router-link to="/foo/mk/agehello">foo</router-link>
         </li>
       </ul>
     </div>
@@ -20,12 +20,18 @@
 <script>
 export default {
   name: 'App',
-  components: {}
+  components: {},
+  watch: {
+    $route (to, from) {
+      console.log(to)
+      console.log(from)
+    }
+  }
 }
 </script>
 
 <style>
-body {
+.body {
   background-color: #f8f8ff;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #2c3e50;
