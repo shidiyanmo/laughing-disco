@@ -20,13 +20,13 @@
 <script>
 export default {
   name: 'App',
-  components: {},
-  watch: {
-    $route (to, from) {
-      console.log(to)
-      console.log(from)
-    }
-  }
+  components: {}
+  // watch: {
+  //   $route (to, from) {
+  //     console.log(to)
+  //     console.log(from)
+  //   }
+  // }
 }
 </script>
 

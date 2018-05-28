@@ -6,6 +6,8 @@ import Router from 'vue-router'
 // import SouGou from '@/components/SouGou'
 import Hello from '@/components/hello'
 import Foo from '@/components/foo'
+import Child1 from '@/components/h-child1'
+import Child2 from '@/components/h-child2'
 
 Vue.use(Router)
 
@@ -14,7 +16,11 @@ export default new Router({
     {
       path: '/hello:hparam1',
       name: 'Hello',
-      component: Hello
+      component: Hello,
+      children: [
+        { name: '/chlid1', path: '/child1', component: Child1 },
+        { name: '/chlid2', path: '/child2', component: Child2 }
+      ]
     },
     {
       path: '/foo/:fparam1/age:fparam2',
