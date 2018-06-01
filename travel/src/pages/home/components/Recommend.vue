@@ -2,7 +2,7 @@
   <div>
     <div class="title">猜你喜欢</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img"  :src='item.imgUrl' />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,34 +17,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1804/c7/c74a66ec65491fc2a3.img.jpg_200x200_57fd010d.jpg',
-        title: '青岛东方影都万达乐园',
-        desc: '92'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1704/67/67b7bbdfaea81d7ba3.water.jpg_200x200_a1633ec7.jpg',
-        title: '黄花溪',
-        desc: '80'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1704/68/68486e04aa011ad1a3.water.jpg_200x200_e82d77d0.jpg',
-        title: '泰和山风景区',
-        desc: '78'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/de/de28c0907fe4117db4.img.jpg_200x200_4065816f.jpg',
-        title: '潍坊欢乐海底世界',
-        desc: '88'
-      }, {
-        id: '0005',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201407/25/a6f2975f4d6624348233b612c7efbd2a.jpg_200x200_9eba4d95.jpg',
-        title: '沂蒙山旅游区沂山景区',
-        desc: '73'
-      }]
     }
   }
 }
