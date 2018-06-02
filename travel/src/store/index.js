@@ -10,12 +10,6 @@ export default new Vuex.Store({
   mutations
 })
 
-// getters: {
-//   doubleCity (state) {
-//     return state.city + ' ' + state.city
-//   }
-// }
-
 // let defaultCity = '上海'
 // try {
 //   if (localStorage.city) {
@@ -38,6 +32,11 @@ export default new Vuex.Store({
 //       try {
 //         localStorage.city = city
 //       } catch (e) {}
+//     }
+//   },
+//   getters: {
+//     doubleCity (state) {
+//       return state.city + ' ' + state.city
 //     }
 //   }
 // })
