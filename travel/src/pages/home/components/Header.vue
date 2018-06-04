@@ -40,7 +40,7 @@ export default {
       float: left
       .back-icon
         text-align: center
-        font-size: .4rem
+        font-size: .35rem
     .header-input
       flex: 1
       height: .64rem
