@@ -47,7 +47,7 @@ export default {
     display flex
     flex-direction column
     justify-content center
-    z-index 99
+    z-index 2
     position fixed
     left 0
     right 0
@@ -57,10 +57,10 @@ export default {
     .wrapper
       height 0
       width 100%
-      padding-bottom 50%
+      padding-bottom 100%
       .gallary-img
         width 100%
       .swiper-pagination
         color #fff
-        bottom -3.4rem
+        bottom -1.4rem
 </style>
