@@ -58,7 +58,9 @@ export default {
   },
   methods: {
     ...mapMutations(['changeCity']),
+
     handleCityClick (city) {
+      this.keyword = ''
       // this.$store.dispatch('changeCity', city)
       // this.$store.commit('changeCity', city)
       this.changeCity(city)

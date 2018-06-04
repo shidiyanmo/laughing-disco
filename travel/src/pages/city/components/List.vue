@@ -6,6 +6,7 @@
         <div class="button-list">
           <div class="button-wrapper">
             <div class="button">{{this.currentCity}}</div>
+                            <!-- {{this.$store.state.city}} -->
           </div>
         </div>
       </div>
@@ -44,10 +45,13 @@ export default {
     })
   },
   methods: {
-    ...mapMutations(['changeCity']),
+    ...mapMutations(['changeCity']), // 简写  映射出this.changeCity(city)
+
     handleCityClick (city) {
-      // this.$store.dispatch('changeCity', city)
-      // this.$store.commit('changeCity', city)
+      const element = this.$refs.wrapper
+      this.scroll.scrollToElement(element)
+      // this.$store.dispatch('changeCity', city) 异步
+      // this.$store.commit('changeCity', city) 同步
       this.changeCity(city)
       this.$router.push('/')
     }
