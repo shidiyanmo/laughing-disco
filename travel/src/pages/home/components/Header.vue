@@ -32,12 +32,12 @@ export default {
   @import '~styles/varibles.styl'
   .header
     display : flex
-    line-height: $headerHeight
+    line-height: .86rem
     background: $bgColor
     color: #fff
     .header-left
       width: .64rem
-      float: left
+      // float: left
       .back-icon
         text-align: center
         font-size: .35rem
@@ -54,7 +54,7 @@ export default {
     .header-right
       min-width: 1.04rem
       padding 0 .1rem
-      float: right
+      // float: right
       text-align: center
       color: #fff
       .arrow-icon

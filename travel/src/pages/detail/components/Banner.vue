@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import CommonGallery from 'common/gallery/gallery'
+import CommonGallery from 'common/gallery/Gallery'
 import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',

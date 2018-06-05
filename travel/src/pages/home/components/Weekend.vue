@@ -52,5 +52,4 @@ export default {
       line-height : .4rem
       color:#ccc
       ellipsis()
-
 </style>

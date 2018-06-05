@@ -33,6 +33,6 @@ export default {
       left:0
       width: .64rem
       text-align:center
-      font-size: .4rem
+      font-size: .35rem
       color: #fff
 </style>
