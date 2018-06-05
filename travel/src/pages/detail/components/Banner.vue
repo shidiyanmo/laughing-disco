@@ -12,12 +12,15 @@
         <div class="banner-title">{{this.sightName}}</div>
       </div>
     </div>
-    <common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+    <fade-animation>
+      <common-gallery :imgs="bannerImgs" v-show="showgallery" @close="handlegalleryClose"></common-gallery>
+    </fade-animation>
   </div>
 </template>
 
 <script>
-import CommonGallary from 'common/gallary/Gallary'
+import CommonGallery from 'common/gallery/gallery'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',
   props: {
@@ -27,19 +30,20 @@ export default {
   },
   data () {
     return {
-      showGallary: false
+      showgallery: false
     }
   },
   methods: {
     handleBannerClick () {
-      this.showGallary = true
+      this.showgallery = true
     },
-    handleGallaryClose () {
-      this.showGallary = false
+    handlegalleryClose () {
+      this.showgallery = false
     }
   },
   components: {
-    CommonGallary
+    CommonGallery,
+    FadeAnimation
   }
 }
 </script>
