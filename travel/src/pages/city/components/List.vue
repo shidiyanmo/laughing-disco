@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">{{this.currentCity}}</div>
+            <div class="button">{{this.city}}</div>
                             <!-- {{this.$store.state.city}} -->
           </div>
         </div>
@@ -40,9 +40,10 @@ export default {
     letter: String
   },
   computed: {
-    ...mapState({
-      currentCity: 'city'
-    })
+    // ...mapState({
+    //   currentCity: 'city'
+    // }),
+    ...mapState(['city'])
   },
   methods: {
     ...mapMutations(['changeCity']), // 简写  映射出this.changeCity(city)

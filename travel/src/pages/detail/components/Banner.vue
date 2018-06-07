@@ -6,14 +6,15 @@
         <span class="iconfont banner-small-image">
           &#xe600;
         </span>
-        {{this.bannerImgs.length}}
+        <em class="banner-samll-num">{{this.bannerImgs.length}}</em>
       </div>
       <div class="banner-info">
         <div class="banner-title">{{this.sightName}}</div>
       </div>
     </div>
     <fade-animation>
-      <common-gallery :imgs="bannerImgs" v-show="showgallery" @close="handlegalleryClose"></common-gallery>
+      <common-gallery :imgs="bannerImgs" v-show="showgallery" @close="handlegalleryClose">
+      </common-gallery>
     </fade-animation>
   </div>
 </template>
@@ -70,18 +71,20 @@ export default {
       .banner-small-image
         position: relative
         top: .02rem
-        overflow hidden
-        font-size .21rem
+        line-height 1
+        font-size .23rem
+      .banner-samll-num
+        margin-left .15rem
+        font-size .27rem
     .banner-info
       display flex
       position absolute
       left 0
       right 0
       bottom 0
-      line-height .6rem
+      line-height .8rem
       color #fff
       background-image linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
-      border-radius .2rem
       .banner-title
         flex 1
         font-size .32rem
